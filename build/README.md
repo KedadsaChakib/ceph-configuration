@@ -36,10 +36,11 @@ sudo apt install lttng-tools lttng-modules-dkms liblttng-ust-dev libbabeltrace-d
    nano debian/rules
    ```
 
-   Modifiez les paramètres pour activer LTTng. Assurez-vous que la ligne suivante est présente :  
+   Modifiez les paramètres pour activer LTTng. Assurez-vous que les lignes suivantes sont présentes :  
 
    ```
-   extraopts += -DWITH_LTTNG=ON
+   extraopts += -DWITH_LTTNG=ON 
+   extraopts += -DWITH_OSD_INSTRUMENT_FUNCTIONS=ON
    ```
 
 4. **Construire les paquets Ceph**  
